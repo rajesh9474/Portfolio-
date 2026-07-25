@@ -1,0 +1,145 @@
+import React, { useState } from 'react';
+import { Github, Linkedin, Mail, ArrowRight, Download, Bot, Sparkles, FileText, CheckCircle2 } from 'lucide-react';
+import ThreeDOrb from './ThreeDOrb';
+
+export default function Hero({ onOpenResumeModal }) {
+  const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('rrajeshsk555@gmail.com');
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  return (
+    <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
+      {/* Subtle Background Glow Spheres */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-grid-pattern opacity-40 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column: Text Content */}
+          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            {/* Status Badge */}
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-cyan-500/30 text-cyan-400 text-xs font-mono tracking-wide shadow-glow-cyan">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+              <span>Available for AI & Web Dev Projects</span>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="font-outfit text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
+              Building <span className="text-gradient">Intelligent</span> Digital Experiences.
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+              Hi, I'm <strong className="text-white font-semibold">Rajesh</strong> — an AI & Machine Learning student passionate about software development, web technologies, and building innovative AI-powered applications.
+            </p>
+
+            {/* Key Quick Tags */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 pt-1">
+              <span className="px-3 py-1 rounded-md bg-slate-800/80 text-xs font-mono text-cyan-300 border border-slate-700/60">
+                B.E. AI & ML (2023–2027)
+              </span>
+              <span className="px-3 py-1 rounded-md bg-slate-800/80 text-xs font-mono text-purple-300 border border-slate-700/60">
+                CGPA: 8.01
+              </span>
+              <span className="px-3 py-1 rounded-md bg-slate-800/80 text-xs font-mono text-emerald-300 border border-slate-700/60">
+                Python & Web Tech
+              </span>
+            </div>
+
+            {/* Primary Call To Actions */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+              <a
+                href="#projects"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-slate-950 font-bold text-sm tracking-wide flex items-center justify-center space-x-2 shadow-glow-cyan hover:opacity-95 transition-all hover:scale-[1.02] active:scale-95"
+              >
+                <span>View My Work</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <a
+                href="/Rajesh_Resume.pdf"
+                download="Rajesh_Resume.pdf"
+                onClick={() => {
+                  onOpenResumeModal();
+                }}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 text-slate-200 font-semibold text-sm tracking-wide flex items-center justify-center space-x-2 transition-all hover:border-cyan-500/50 hover:text-white cursor-pointer shadow-lg"
+              >
+                <Download className="w-4 h-4 text-cyan-400" />
+                <span>Download Resume</span>
+              </a>
+            </div>
+
+            {/* Secondary Links (GitHub, LinkedIn, Email) */}
+            <div className="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-400 text-xs font-mono">
+              <span className="text-slate-500 uppercase tracking-widest text-[11px]">Connect:</span>
+
+              <a
+                href="https://github.com/rajesh9474/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-cyan-400 transition-colors group"
+                aria-label="GitHub Profile"
+              >
+                <Github className="w-4 h-4 text-slate-400 group-hover:text-cyan-400" />
+                <span>github.com/rajesh9474</span>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/r-rajesh-05997633a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-purple-400 transition-colors group"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="w-4 h-4 text-slate-400 group-hover:text-purple-400" />
+                <span>LinkedIn</span>
+              </a>
+
+              <button
+                onClick={handleCopyEmail}
+                className="flex items-center space-x-2 hover:text-cyan-400 transition-colors group"
+                title="Click to copy email address"
+              >
+                <Mail className="w-4 h-4 text-slate-400 group-hover:text-cyan-400" />
+                <span>{copiedEmail ? 'Copied!' : 'rrajeshsk555@gmail.com'}</span>
+                {copiedEmail && <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />}
+              </button>
+            </div>
+
+          </div>
+
+          {/* Right Column: 3D Scene */}
+          <div className="lg:col-span-5 relative flex items-center justify-center">
+            
+            {/* Subtle glow border wrapper */}
+            <div className="w-full relative rounded-3xl glass-panel p-2 border border-slate-800/80 shadow-2xl">
+              
+              {/* Floating Header Tag */}
+              <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-lg bg-slate-950/80 border border-cyan-500/40 text-[11px] font-mono text-cyan-300 flex items-center space-x-2 backdrop-blur-md">
+                <Bot className="w-3.5 h-3.5 text-cyan-400 animate-spin-slow" />
+                <span>AI Core Neural Mesh</span>
+              </div>
+
+              {/* Three.js Interactive Sphere Container */}
+              <ThreeDOrb />
+
+              {/* Interactive hint */}
+              <div className="absolute bottom-4 right-4 z-20 text-[10px] font-mono text-slate-400 bg-slate-950/80 px-2.5 py-1 rounded-md border border-slate-800 backdrop-blur-md">
+                Drag / Move mouse to rotate
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}

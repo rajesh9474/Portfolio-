@@ -1,0 +1,108 @@
+%PDF-1.4
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /Resources <<
+    /Font <<
+      /F1 4 0 R
+    >>
+  >>
+  /MediaBox [0 0 612 792]
+  /Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+
+5 0 obj
+<< /Length 2000 >>
+stream
+BT
+/F1 10 Tf
+36 750 Td
+14 TL
+(R RAJESH) '
+(B.E. Artificial Intelligence & Machine Learning Student) '
+(Location: Andaman and Nicobar Islands, India) '
+(Email: rrajeshsk555@gmail.com) '
+(LinkedIn: linkedin.com/in/r-rajesh-05997633a/) '
+(GitHub: github.com/rajesh9474/) '
+() '
+(================================================================================) '
+(EDUCATION) '
+(================================================================================) '
+(B.E. Artificial Intelligence and Machine Learning \(2023 - 2027\)) '
+(CGPA: 8.01 / 10.0) '
+() '
+(================================================================================) '
+(TECHNICAL SKILLS) '
+(================================================================================) '
+(Frontend: HTML5, CSS3, JavaScript, Bootstrap, React) '
+(Backend: Python) '
+(Tools & AI Platforms: Git & GitHub, VS Code, Replit, Emergent, Bolt, Antigravity, Cursor, Stitch) '
+() '
+(================================================================================) '
+(SOFT SKILLS & LANGUAGES) '
+(================================================================================) '
+(Soft Skills: Teamwork, Communication, Adaptability, Time Management, Problem Solving, Active Listening) '
+(Languages: Tamil, English, Hindi) '
+() '
+(================================================================================) '
+(PROJECTS) '
+(================================================================================) '
+(1. BrainNova AI - AI-Powered Note-Taking Application) '
+(   Conversational AI assistant for Summarization, Grammar correction, Content editing.) '
+(   Live URL: https://note-mind-ai-six.vercel.app/) '
+() '
+(2. Inter-College Hackathon Website) '
+(   Responsive frontend interface for inter-college hackathon event portal.) '
+(   Live URL: https://ignite2k26.vercel.app/) '
+() '
+(================================================================================) '
+(ACHIEVEMENTS & CERTIFICATIONS) '
+(================================================================================) '
+(- Internship Masterclass Certificate - Novitech Academy, Chennai) '
+(- AI Upskilling Certificate: Technical Foundation - Qualcomm Academy) '
+(- Industrial Visit Certificate - Suffix E Solution) '
+ET
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000244 00000 n 
+0000000315 00000 n 
+trailer
+<<
+  /Size 6
+  /Root 1 0 R
+>>
+startxref
+2400
+%%EOF
