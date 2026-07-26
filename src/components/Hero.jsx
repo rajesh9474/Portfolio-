@@ -19,7 +19,7 @@ export default function Hero({ onOpenResumeModal }) {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-grid-pattern opacity-40 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           
           {/* Left Column: Text Content */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
@@ -31,7 +31,7 @@ export default function Hero({ onOpenResumeModal }) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-outfit text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
+            <h1 className="font-outfit text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.18] text-white">
               Building <span className="text-gradient">Intelligent</span> Digital Experiences.
             </h1>
 
@@ -77,7 +77,7 @@ export default function Hero({ onOpenResumeModal }) {
             </div>
 
             {/* Secondary Links (GitHub, LinkedIn, Email) */}
-            <div className="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-400 text-xs font-mono">
+            <div className="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 text-slate-400 text-xs font-mono">
               <span className="text-slate-500 uppercase tracking-widest text-[11px]">Connect:</span>
 
               <a
@@ -119,7 +119,7 @@ export default function Hero({ onOpenResumeModal }) {
           <div className="lg:col-span-5 relative flex items-center justify-center">
             
             {/* Subtle glow border wrapper */}
-            <div className="w-full relative rounded-3xl glass-panel p-2 border border-slate-800/80 shadow-2xl">
+            <div className="w-full max-w-sm sm:max-w-none relative rounded-3xl glass-panel p-2 border border-slate-800/80 shadow-2xl">
               
               {/* Floating Header Tag */}
               <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-lg bg-slate-950/80 border border-cyan-500/40 text-[11px] font-mono text-cyan-300 flex items-center space-x-2 backdrop-blur-md">

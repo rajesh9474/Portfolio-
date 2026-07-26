@@ -151,7 +151,18 @@ export default function ThreeDOrb() {
       targetY = (y / rect.height) * 0.8;
     };
 
+    const handleTouchMove = (event) => {
+      if (event.touches && event.touches[0]) {
+        const rect = container.getBoundingClientRect();
+        const x = event.touches[0].clientX - rect.left - rect.width / 2;
+        const y = event.touches[0].clientY - rect.top - rect.height / 2;
+        targetX = (x / rect.width) * 0.8;
+        targetY = (y / rect.height) * 0.8;
+      }
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
+    container.addEventListener('touchmove', handleTouchMove, { passive: true });
 
     // Resize Handler
     const handleResize = () => {
@@ -204,6 +215,7 @@ export default function ThreeDOrb() {
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('mousemove', handleMouseMove);
+      container.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('resize', handleResize);
       if (container.contains(renderer.domElement)) {
         container.removeChild(renderer.domElement);
@@ -224,11 +236,11 @@ export default function ThreeDOrb() {
 
   if (!webglSupported) {
     return (
-      <div className="w-full h-full flex items-center justify-center min-h-[350px]">
-        <div className="relative w-64 h-64 rounded-full bg-gradient-to-tr from-cyan-500/20 to-purple-600/30 border border-cyan-500/30 flex items-center justify-center animate-pulse-slow">
-          <div className="w-48 h-48 rounded-full bg-slate-900/80 border border-cyan-400/50 flex flex-col items-center justify-center text-center p-4">
-            <span className="text-3xl font-bold text-gradient">AI Core</span>
-            <span className="text-xs text-slate-400 mt-2">Neural Network Visualizer</span>
+      <div className="w-full h-full flex items-center justify-center min-h-[300px] sm:min-h-[350px]">
+        <div className="relative w-52 h-52 sm:w-64 sm:h-64 rounded-full bg-gradient-to-tr from-cyan-500/20 to-purple-600/30 border border-cyan-500/30 flex items-center justify-center animate-pulse-slow">
+          <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-slate-900/80 border border-cyan-400/50 flex flex-col items-center justify-center text-center p-4">
+            <span className="text-2xl sm:text-3xl font-bold text-gradient">AI Core</span>
+            <span className="text-[10px] sm:text-xs text-slate-400 mt-2">Neural Network Visualizer</span>
           </div>
         </div>
       </div>
@@ -238,7 +250,7 @@ export default function ThreeDOrb() {
   return (
     <div 
       ref={mountRef} 
-      className="w-full h-[380px] sm:h-[450px] lg:h-[520px] relative flex items-center justify-center cursor-grab active:cursor-grabbing"
+      className="w-full h-[280px] sm:h-[400px] lg:h-[520px] relative flex items-center justify-center cursor-grab active:cursor-grabbing touch-pan-y"
       aria-label="Interactive 3D AI Neural Core Visualization"
     />
   );

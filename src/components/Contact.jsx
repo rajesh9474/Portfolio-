@@ -63,16 +63,16 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative z-10 border-t border-slate-800/60 bg-slate-950/60">
+    <section id="contact" className="py-16 sm:py-24 relative z-10 border-t border-slate-800/60 bg-slate-950/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3 sm:space-y-4">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-widest">
             <MessageSquare className="w-3.5 h-3.5" />
             <span>Get In Touch</span>
           </div>
-          <h2 className="font-outfit text-3xl sm:text-5xl font-extrabold text-white">
+          <h2 className="font-outfit text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white">
             Let's Build Something <span className="text-gradient">Intelligent</span>.
           </h2>
           <p className="text-slate-400 text-sm sm:text-base">
@@ -80,7 +80,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-start">
           
           {/* Left Column: Direct Links & Info (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">

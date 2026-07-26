@@ -3,12 +3,32 @@
 @tailwind utilities;
 
 @layer base {
-  body {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  html, body {
     background-color: #070a13;
     color: #e2e8f0;
     overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /* Prevent any element from causing overflow on mobile */
+  img, video, canvas, svg {
+    max-width: 100%;
   }
 }
+
 
 /* Glassmorphism card utilities */
 .glass-panel {
